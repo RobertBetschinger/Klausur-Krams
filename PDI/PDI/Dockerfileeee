@@ -1,0 +1,3 @@
+FROM alpine:latest
+RUN apk add --no-cache curl jq
+CMD curl -k https://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote | jq .content > /opt/quote.txt && cat /opt/quote.txt

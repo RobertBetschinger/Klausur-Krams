@@ -1,0 +1,5 @@
+FROM node:latest
+EXPOSE 80
+COPY server.js .
+COPY quote.txt /opt/quote.txt
+CMD node server.js
